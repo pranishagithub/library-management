@@ -1,0 +1,343 @@
+/* Modern & Stylish Library Management CSS */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+    color: #22223b;
+    min-height: 100vh;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #6366f1 0%, #a5b4fc 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
+}
+
+header nav {
+    display: flex;
+    gap: 1.2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+    outline: none;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #6366f1 0%, #818cf8 100%);
+    color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background: linear-gradient(90deg, #4f46e5 0%, #6366f1 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.btn-secondary {
+    background: #f3f4f6;
+    color: #6366f1;
+    border: 1.5px solid #6366f1;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.btn-warning {
+    background: linear-gradient(90deg, #fbbf24 0%, #fde68a 100%);
+    color: #7c4700;
+}
+
+.btn-warning:hover, .btn-warning:focus {
+    background: linear-gradient(90deg, #f59e42 0%, #fbbf24 100%);
+}
+
+.btn-danger {
+    background: linear-gradient(90deg, #ef4444 0%, #fca5a5 100%);
+    color: #fff;
+}
+
+.btn-danger:hover, .btn-danger:focus {
+    background: linear-gradient(90deg, #b91c1c 0%, #ef4444 100%);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #6366f1;
+    border: 2px solid #6366f1;
+}
+
+.btn-outline:hover, .btn-outline:focus {
+    background: #6366f1;
+    color: #fff;
+}
+
+.btn-sm {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+}
+
+/* Actions bar */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.search-form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.search-form input {
+    padding: 12px 16px;
+    border: 1.5px solid #c7d2fe;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f1f5f9;
+    transition: border-color 0.2s;
+    width: 260px;
+}
+
+.search-form input:focus {
+    border-color: #6366f1;
+    outline: none;
+    background: #fff;
+}
+
+/* Alerts */
+.alert {
+    padding: 18px 22px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.07);
+}
+
+.alert-success {
+    background: #e0f7e9;
+    color: #15803d;
+    border: 1.5px solid #bbf7d0;
+}
+
+.alert-error {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1.5px solid #fecaca;
+}
+
+.alert ul {
+    margin: 0;
+    padding-left: 24px;
+}
+
+/* Table */
+.table-container {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(99, 102, 241, 0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+th, td {
+    padding: 18px 16px;
+    text-align: left;
+    border-bottom: 1.5px solid #f1f5f9;
+}
+
+th {
+    background: #f1f5f9;
+    font-weight: 700;
+    color: #3730a3;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 0.7px;
+}
+
+tr:hover {
+    background: #f3f4f6;
+    transition: background 0.2s;
+}
+
+.actions-cell {
+    white-space: nowrap;
+}
+
+.actions-cell .btn {
+    margin-right: 6px;
+}
+
+.no-data {
+    text-align: center;
+    color: #9ca3af;
+    font-style: italic;
+    padding: 48px;
+    font-size: 1.1rem;
+}
+
+/* Status badges */
+.status {
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.status.available {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status.issued {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Forms */
+.book-form {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(99, 102, 241, 0.08);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.8rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 700;
+    color: #3730a3;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #c7d2fe;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f1f5f9;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #6366f1;
+    background: #fff;
+    box-shadow: 0 0 0 2px #a5b4fc55;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    margin-top: 2.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .container {
+        padding: 12px;
+    }
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    header h1 {
+        font-size: 2.1rem;
+    }
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search-form {
+        flex-direction: column;
+        width: 100%;
+    }
+    .search-form input {
+        width: 100%;
+    }
+    .table-container {
+        overflow-x: auto;
+    }
+    table {
+        min-width: 800px;
+    }
+    .form-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    th, td {
+        padding: 12px 8px;
+        font-size: 0.95rem;
+    }
+    .btn-sm {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+    .book-form {
+        padding: 1.2rem 0.5rem;
+    }
+}
